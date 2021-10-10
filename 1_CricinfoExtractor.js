@@ -188,7 +188,7 @@ function createFolders(teams) {
     fs.mkdirSync(args.dataFolder);
     for (let i = 0; i < teams.length; i++) {
         let teamFN = path.join(args.dataFolder, teams[i].name);
-        //fs.mkdirSync(teamFN);
+        fs.mkdirSync(teamFN);
 
         for (let j = 0; j < teams[i].matches.length; j++) {
             let matchFileName = path.join(teamFN, teams[i].matches[j].vs + ".pdf");
